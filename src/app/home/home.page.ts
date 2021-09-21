@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Keyboard, KeyboardStyle } from '@capacitor/keyboard';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() {
+    Keyboard.setAccessoryBarVisible({ isVisible: false });
+    Keyboard.setStyle({ style: KeyboardStyle.Dark })
+
+  }
 
 }

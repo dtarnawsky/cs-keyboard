@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header></ion-header>
+<ion-content>
+  <div class="container">
+    <ion-label>First Name</ion-label>
+    <ion-input name="firstname" id="firstname" placeholder="Enter your first name" maxlength=99 inputmode="text" type="text"></ion-input>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-label>Last Name</ion-label>
+    <ion-input name="lastname" id="lastname" placeholder="Enter your first name" maxlength=99 inputmode="text" type="text"></ion-input>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <ion-label>Social Security Number (Ionic)</ion-label>
+    <ion-input name="ssn" id="ssn" placeholder="Enter SSN" minlength=10 maxlength=10 inputmode="numeric" type="number" pattern="/^\d{10}$/"></ion-input>
+
+    <ion-label>Social Security Number (ngx-mask)</ion-label><br/>
+    <input class="my-input" name="ssn2" id="ssn2" placeholder="000-000-0000" type="text" pattern="[0-9]*" mask="000-000-0000" />
+
+    <br/>
+    <ion-label>One Time Password</ion-label><br/>
+    <input class="my-input" maxlength="6" type="number" name="token" id="token" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" />
+
   </div>
 </ion-content>
